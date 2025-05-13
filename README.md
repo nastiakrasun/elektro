@@ -11,6 +11,7 @@
 - **Управління тарифами**: Можливість перегляду та зміни тарифів.
 
 ## Структура проєкту
+```bash
 elektro/
 ├── db.sqlite3                # База даних SQLite
 ├── manage.py                 # Django management script
@@ -42,6 +43,7 @@ elektro/
 │       ├── js/               # JavaScript файли
 │       └── images/           # Зображення
 └── requirements.txt          # Залежності проєкту
+```
 
 
 ## Встановлення
