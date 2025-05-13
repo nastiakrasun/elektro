@@ -11,7 +11,37 @@
 - **Управління тарифами**: Можливість перегляду та зміни тарифів.
 
 ## Структура проєкту
-elektro/ ├── db.sqlite3 # База даних SQLite ├── manage.py # Django management script ├── elektro/ # Головна конфігурація Django │ ├── settings.py # Налаштування проєкту │ ├── urls.py # Головні маршрути │ └── ... ├── main/ # Головний додаток │ ├── models.py # Моделі бази даних │ ├── views.py # Представлення │ ├── forms.py # Форми │ ├── templates/ # Шаблони HTML │ │ ├── main/ │ │ ├── index.html # Головна сторінка │ │ ├── bills.html # Сторінка рахунків │ │ ├── meters.html # Сторінка лічильників │ │ ├── tariffs.html # Сторінка тарифів │ │ └── success.html # Сторінка успіху │ ├── static/ # Статичні файли │ │ ├── css/ # CSS стилі │ │ ├── js/ # JavaScript файли │ │ └── images/ # Зображення │ └── tests.py # Тести └── ...
+elektro/
+├── db.sqlite3                # База даних SQLite
+├── manage.py                 # Django management script
+├── elektro/                  # Головна конфігурація Django
+│   ├── __init__.py           # Ініціалізація пакета
+│   ├── asgi.py               # ASGI конфігурація
+│   ├── settings.py           # Налаштування проєкту
+│   ├── urls.py               # Головні маршрути
+│   ├── wsgi.py               # WSGI конфігурація
+├── main/                     # Головний додаток
+│   ├── __init__.py           # Ініціалізація пакета
+│   ├── admin.py              # Реєстрація моделей в адмінпанелі
+│   ├── apps.py               # Конфігурація додатка
+│   ├── forms.py              # Форми
+│   ├── models.py             # Моделі бази даних
+│   ├── tests.py              # Тести
+│   ├── views.py              # Представлення
+│   ├── migrations/           # Міграції бази даних
+│   │   ├── __init__.py       # Ініціалізація пакета
+│   └── templates/            # Шаблони HTML
+│       ├── main/
+│           ├── index.html    # Головна сторінка
+│           ├── bills.html    # Сторінка рахунків
+│           ├── meters.html   # Сторінка лічильників
+│           ├── tariffs.html  # Сторінка тарифів
+│           └── success.html  # Сторінка успіху
+│   └── static/               # Статичні файли
+│       ├── css/              # CSS стилі
+│       ├── js/               # JavaScript файли
+│       └── images/           # Зображення
+└── requirements.txt          # Залежності проєкту
 
 
 ## Встановлення
