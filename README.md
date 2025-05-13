@@ -55,9 +55,9 @@ elektro/ ├── db.sqlite3 # База даних SQLite ├── manage.py #
 
 ## Тестування
 Для запуску тестів виконайте:
-    ```bash
-    python manage.py test
-    ```
+```bash
+python manage.py test
+```
 
 ## Автор
 **Розроблено Буряківською Анастасією.**
