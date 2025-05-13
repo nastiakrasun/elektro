@@ -1,0 +1,218 @@
+/* fonts import */
+@import url("../fonts/octin_sports_rg.ttf");
+
+/* Базові стилі */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: initial;
+}
+
+/* Секція header_section */
+.header_section {
+  background-color: #ffffff;
+}
+
+.header_section .navbar-brand span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #272727;
+  text-transform: uppercase;
+}
+
+.custom_nav-container {
+  z-index: 99999;
+  padding: 5px 0;
+}
+
+.custom_nav-container .navbar-nav .nav-item .nav-link {
+  padding: 3px 15px;
+  margin: 10px 15px;
+  color: #272727;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.custom_nav-container .navbar-toggler {
+  padding: 0;
+  width: 37px;
+  height: 42px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.custom_nav-container .navbar-toggler span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  background-color: #000000;
+  border-radius: 15px;
+  margin: 7px 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.custom_nav-container .navbar-toggler span::before,
+.custom_nav-container .navbar-toggler span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 15px;
+  top: -10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.custom_nav-container .navbar-toggler span::after {
+  top: 10px;
+}
+
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span::before,
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 0;
+}
+
+/* Секція info_section */
+.info_section {
+  background-color: #191e1f;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.info_section .contact_nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.info_section .contact_nav a {
+  flex: 1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.info_section .contact_nav a i {
+  font-size: 28px;
+}
+
+.info_section .contact_nav a:hover {
+  color: #f89646;
+}
+
+/* Секція footer_section */
+.footer_section {
+  margin-top: auto; /* Зміщує футер донизу */
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f9fa; /* Можна змінити колір за потреби */
+}
+
+.footer_section p {
+  color: #000000;
+  margin: 0;
+}
+
+.footer_section p a {
+  color: inherit;
+}
+
+/* Стилі для заголовка */
+h2 {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Стилі для форми */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Поля форми */
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Кнопка */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Повідомлення */
+.alert {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

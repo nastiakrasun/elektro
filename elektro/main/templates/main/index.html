@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Подати показники двофазного лічильника</h2>
+<form method="post" action="{% url 'submit_reading' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Відправити показники</button>
+</form>
+{% if messages %}
+<div class="container mt-3">
+    {% for message in messages %}
+    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+<h2 class="text-center mt-4">Лічильники</h2>
+
+<div class="container mt-5">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Номер лічильника</th>
+        <th scope="col">Поточні показники (день)</th>
+        <th scope="col">Поточні показники (ніч)</th>
+        <th scope="col">Загальна сума до сплати (грн)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for meter in meters %}
+      <tr>
+        <td>{{ meter.meter_number }}</td>
+        <td>{{ meter.current_day_reading }}</td>
+        <td>{{ meter.current_night_reading }}</td>
+        <td>{{ meter.total_cost }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="4" class="text-center">Немає даних про лічильники</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

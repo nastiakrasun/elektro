@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+<h2 class="text-center mt-4">Тарифи на електроенергію</h2>
+
+<div class="container mt-5">
+  <h4>Актуальні тарифи:</h4>
+  <ul>
+    <li>Денний тариф: {{ tariff.day_rate }} грн/кВт</li>
+    <li>Нічний тариф: {{ tariff.night_rate }} грн/кВт</li>
+  </ul>
+
+  <h4 class="mt-4">Змінити тарифи:</h4>
+  <form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Зберегти</button>
+  </form>
+</div>
+{% endblock %}
